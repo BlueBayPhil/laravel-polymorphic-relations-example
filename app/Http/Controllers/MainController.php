@@ -47,7 +47,7 @@ class MainController extends Controller
         $tags->each(function ($tag) use ($model) {
             $tag = Tag::findOrCreate($tag);
 
-            $model->tags()->attach($tag);
+            $model->tags()->attach($tag, ["extra_data" => "some extra data"]);
         });
 
         return response()->redirectToRoute('index');

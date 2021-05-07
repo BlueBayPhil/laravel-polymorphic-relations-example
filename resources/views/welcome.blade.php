@@ -37,9 +37,9 @@
                         @foreach($videos as $video)
                             <tr>
                                 <td>{{ $video }}</td>
-                                <td>
+                                <td class="text-right">
                                     @foreach($video->tags as $tag)
-                                        <span class="badge m-3">{{ $tag }}</span>
+                                        <span class="badge badge-primary fs-6 p-2">{{ $tag }}</span>
                                     @endforeach
                                 </td>
                             </tr>
